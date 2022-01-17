@@ -34,7 +34,6 @@ ssh_read_data() {
   done < <(echo "$contents")
   if [[ -z ${ssh_address+x} ]]; then
     ssh_address="${ssh_user// /}@${ssh_host// /}"
-    echo "$ssh_address"
   fi
 
   [[ -z ${ssh_address+x} ]] && die "$path: SSH host not defined."
