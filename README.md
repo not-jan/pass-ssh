@@ -1,5 +1,3 @@
-This is a fork of https://github.com/not-jan/pass-ssh
-
 # pass-ssh
 
 Allows you to start an SSH session from a pass entry.
