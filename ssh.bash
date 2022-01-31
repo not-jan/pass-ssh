@@ -40,6 +40,9 @@ ssh_read_data() {
   # Default value for flags
   ssh_flags="${ssh_flags:-}"
 
+  if [[ "$TERM" == "xterm-kitty" ]]; then
+      export TERM="xterm-color"
+  fi
   export SSHPASS="$ssh_password"
   /usr/bin/sshpass -e -- ssh $ssh_flags "${@:2}" "$ssh_address"
 }
